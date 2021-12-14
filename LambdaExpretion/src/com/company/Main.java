@@ -22,9 +22,6 @@ public class Main {
 
         //testSumFun();
 
-
-
-
     }
 
     private static void getSizeFun() {
@@ -63,7 +60,6 @@ public class Main {
     }
 
     private static void lambdaArgumentsFun() {
-
         List<Words> list = Arrays.asList(
                 new Words("Lera", "Molotowa", 22),
                 new Words("Dasha", "Kowalska", 19),
@@ -71,7 +67,6 @@ public class Main {
                 new Words("George", "Shwilli", 4)
         );
                 printThis(list, p -> System.out.println(p.getStr()), p -> p.getStr().startsWith("L"));
-
     }
 
     private static void printThis(List<Words> list, Consumer<Words> consumer, Predicate<Words> predicate){
@@ -109,10 +104,10 @@ public class Main {
         list.add("a");
 
         list.forEach(biegac -> System.out.println(biegac));
-
     }
 }
 
+@FunctionalInterface
 interface lambdaExpretion{
     int getSize(String str);
 }
